@@ -1,0 +1,9 @@
+Package: com.dpkg.colormysb
+Name: ColorMySB
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
+Version: 0.9~beta3
+Architecture: iphoneos-arm
+Description: Liven up your modern StatusBar!
+Maintainer: dpkg_
+Author: dpkg_
+Section: Tweaks
