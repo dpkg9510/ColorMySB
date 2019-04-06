@@ -133,9 +133,10 @@ if (wifiOption == 0) {
 -(void)applicationDidFinishLaunching:(id)application {
 if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.dpkg.colormysb.list"]) 
 {
-	%orig;
+     %orig;
 }
-else {
+else
+{
       %orig;
 	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ColorMySB" message:@"Please use the official version from: https://dpkg9510.github.io/" preferredStyle:UIAlertControllerStyleAlert];
 	[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
