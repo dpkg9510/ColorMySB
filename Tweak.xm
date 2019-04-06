@@ -11,7 +11,7 @@ static int imgOption;
 //Wifi Color
 %hook _UIStatusBarWifiSignalView
 
-    -(void)_colorsDidChange {
+-(void)_colorsDidChange {
 if (wifiOption == 0) {
             %orig;
 }else if (wifiOption == 1) {
@@ -45,7 +45,7 @@ if (wifiOption == 0) {
 //Cellular Signals
 %hook _UIStatusBarCellularSignalView
 
-    -(void)_colorsDidChange {
+-(void)_colorsDidChange {
       if (cellOption == 0) {
             %orig;
 }else if (cellOption == 1) {
@@ -79,7 +79,7 @@ if (wifiOption == 0) {
 //Text (needs to be separated).
 %hook _UIStatusBarStringView
 
- -(void)setTextColor:(UIColor *)color {
+-(void)setTextColor:(UIColor *)color {
 if (textOption == 0) {
             %orig();
 }else if (textOption == 1) {
@@ -105,7 +105,7 @@ if (textOption == 0) {
 
 //Items (needs to be separated)
 %hook _UIStatusBarImageView
-    -(void)tintColorDidChange {
+-(void)tintColorDidChange {
 if (wifiOption == 0) {
             %orig;
 }else if (imgOption == 1) {
