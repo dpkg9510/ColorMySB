@@ -64,10 +64,13 @@ enum imgOptions {
 
 
 @interface _UIStatusBarForegroundView : UIView
-
 @property (nonatomic, copy, readwrite) UIColor *tintColor;
-
 -(void)layoutSubviews;
-
 @end
+
+@interface SBHomeScreenViewController : UIView
+@end
+
+
+
 
