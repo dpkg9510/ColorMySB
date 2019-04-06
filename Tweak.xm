@@ -18,13 +18,12 @@ if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.dp
 	%orig;
 } 
 else {
-%orig;
+       %orig;
 	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ColorMySB" message:@"Please use the official version from: https://dpkg9510.github.io/" preferredStyle:UIAlertControllerStyleAlert];
 	[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 	[self.keyWindow.rootViewController dismissViewControllerAnimated:YES completion:NULL];
 }]];
-	
-	[self.keyWindow.rootViewController presentViewController:alertController animated:YES completion:NULL];
+    [self.keyWindow.rootViewController presentViewController:alertController animated:YES completion:NULL];
 }
 }
 %end
@@ -36,7 +35,7 @@ else {
 if (wifiOption == 0) {
             %orig;
 }else if (wifiOption == 1) {
-             %orig;
+            %orig;
             self.activeColor = [UIColor redColor];
 }else if (wifiOption == 2) {
             %orig;

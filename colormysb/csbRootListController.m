@@ -41,7 +41,6 @@
 		[label setNumberOfLines:1];
 		label.font = [UIFont systemFontOfSize:50];
 		[label setText:@"ColorMySB"];
-		//[label setBackgroundColor:[UIColor clearColor]];
 		label.textColor = kTintColor;
 		label.textAlignment = NSTextAlignmentCenter;
 
@@ -49,7 +48,6 @@
 		[underLabel setNumberOfLines:1];
 		underLabel.font = [UIFont systemFontOfSize:20];
              [underLabel setText:@"Liven up your StatusBar!"];
-		//[underLabel setBackgroundColor:[UIColor clearColor]];
 		underLabel.textColor = [UIColor redColor];
 		underLabel.textAlignment = NSTextAlignmentCenter;
 
