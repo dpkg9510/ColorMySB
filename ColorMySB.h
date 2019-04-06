@@ -46,9 +46,6 @@ enum imgOptions {
   GrayIMG = 8,
 };
 
-@interface SBHomeScreenViewController : UIView
-@end
-
 @interface _UIStatusBarWifiSignalView 
 @property (nonatomic, copy, readwrite) UIColor *activeColor;
 @end
@@ -64,3 +61,13 @@ enum imgOptions {
 @interface _UIStatusBarImageView : UIView
 @property (nonatomic, copy, readwrite) UIColor *tintColor;
 @end
+
+
+@interface _UIStatusBarForegroundView : UIView
+
+@property (nonatomic, copy, readwrite) UIColor *tintColor;
+
+-(void)layoutSubviews;
+
+@end
+

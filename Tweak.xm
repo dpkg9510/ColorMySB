@@ -8,26 +8,6 @@ static int cellOption;
 static int textOption;
 static int imgOption;
 
-
-//annoy pirates
-%hook SpringBoard
-
--(void)applicationDidFinishLaunching:(id)application {
-if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.dpkg.colormysb.list"]) 
-{
-	%orig;
-} 
-else {
-       %orig;
-	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ColorMySB" message:@"Please use the official version from: https://dpkg9510.github.io/" preferredStyle:UIAlertControllerStyleAlert];
-	[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-	[self.keyWindow.rootViewController dismissViewControllerAnimated:YES completion:NULL];
-}]];
-    [self.keyWindow.rootViewController presentViewController:alertController animated:YES completion:NULL];
-}
-}
-%end
-
 //Wifi Color
 %hook _UIStatusBarWifiSignalView
 
@@ -148,6 +128,19 @@ if (wifiOption == 0) {
 }
 %end
 
+//testing
+//@class _UIStatusBarImageView;
+//%hook  _UIStatusBarForegroundView
+
+    -(void)layoutSubviews 
+{
+      %orig;
+      for (_UIStatusBarImageView *view in self.subviews[5].subviews) {
+
+     view.tintColor = [UIColor cyanColor];
+}
+}
+%end
 
 //end
 
