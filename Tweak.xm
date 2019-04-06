@@ -96,7 +96,7 @@ if (wifiOption == 0) {
 }
 %end
 
-//Text (needs to be separated)
+//Text (needs to be separated).
 %hook _UIStatusBarStringView
 
  -(void)setTextColor:(UIColor *)color {
