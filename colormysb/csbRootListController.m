@@ -41,7 +41,6 @@
 		[label setNumberOfLines:1];
 		label.font = [UIFont systemFontOfSize:50];
 		[label setText:@"ColorMySB"];
-		label.textColor = kTintColor;
 		label.textAlignment = NSTextAlignmentCenter;
 
 		underLabel = [[UILabel alloc] initWithFrame:underLabelFrame];

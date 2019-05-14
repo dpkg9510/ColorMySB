@@ -1,5 +1,5 @@
 DEBUG = 0
-export ARCHS = arm64
+export ARCHS = arm64 arm64e
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = ColorMySB
